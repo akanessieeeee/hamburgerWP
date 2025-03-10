@@ -1,0 +1,53 @@
+@use "../../../foundation/foundation" as f;
+.c-box{
+    height: 46px;
+}
+
+.p-header__search{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+    @include f.breakpoint(pc) {
+        width: 35%;
+    }
+
+    @include f.breakpoint(pc) {
+        padding: 0 2% 0 0;
+    }
+
+    &__box--input{
+        width: 216px;
+        margin-right: 12px;
+        padding-left: 35px;
+        background-image: url("../../../images/header_icon_serch.png");
+        background-position: 5px center;
+        color: f.$TextGray;
+
+        @include f.breakpoint(tablet) {
+            width: 396px;
+            margin-right: 14px;
+            padding-left: 42px;
+            background-position: 12px center;
+
+            @include f.breakpoint(pc) {
+                width: 72.5%;
+            }
+        }
+    }
+
+    &__box--submit{
+        width: 90px;
+        background: linear-gradient(180deg,f.$DarkBeige,f.$Gray);
+        color: f.$TextGray;
+        font-weight: f.$bold;
+
+        @include f.breakpoint(tablet) {
+            width: 136px;
+
+            @include f.breakpoint(pc) {
+                width: 25%;
+            }
+        }
+    }
+}

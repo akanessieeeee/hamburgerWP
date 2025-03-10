@@ -1,0 +1,27 @@
+@use "../../../foundation/foundation" as f;
+
+
+//btn--close
+.p-header__btn{
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    right: 8px;
+    z-index: 9999;
+    cursor: pointer;
+
+    @include f.breakpoint(tablet) {
+        font-size: 30px;
+        top: 20px;
+        right: 25px;
+
+        @include f.breakpoint(pc) {
+            display: none;
+        }
+    }
+}
+
+//btn--open
+.p-header__btn.open{
+    display: none;
+}

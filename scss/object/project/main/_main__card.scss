@@ -1,0 +1,124 @@
+@use "../../../foundation/foundation" as f;
+
+.p-main__card__wrapper{
+    
+    @include f.breakpoint(tablet) {
+        display: flex;
+    }
+}
+
+.p-main__card{
+    margin: 20px;
+    padding-bottom: 16px;
+    min-height: 643px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include f.breakpoint(tablet) {
+        width: 50%;
+        margin: 40px;
+        min-height: 681px;
+
+        @include f.breakpoint(pc) {
+            margin: 7.7% 7.7% 8.4% 7.7%;
+            min-height: 1197px;
+        }
+    }
+
+    &__title{
+        font-size: 40px;
+        margin-top: 13px;
+        margin-left: 15px;
+    
+        @include f.breakpoint(tablet) {
+            margin-top: 14px;
+            margin-left: 11px;
+    
+            @include f.breakpoint(pc) {
+                font-size: 65px;
+                margin-top: 28px;
+                margin-left: 14px;
+            }
+        }
+    }
+
+    &__title:first-of-type{
+        color: f.$TextWhite;
+    }
+
+    &__separate{
+        height: 5px;
+        width: 35px;
+        margin-left: 16px;
+    
+        @include f.breakpoint(tablet) {
+            margin-top: 10px;
+            margin-left: 11px;
+    
+            @include f.breakpoint(pc) {
+                margin-top: 20px;
+                margin-left: 17.5px;
+                width: 63px;
+            }
+        }
+    }
+
+    &__sabcard{
+        height: auto;
+        opacity: 0.8;
+        margin: 16px 16px 0 16px;
+        color: f.$TextDarkBrown;
+    
+        &__title{
+          font-size: 25px;
+          margin-top: 16px;
+          margin-left: 16px;
+        }
+    
+        &__content{
+          font-size: 17px;
+          padding: 16px;
+          
+          @include f.breakpoint(tablet) {
+            line-height: 21px;
+          }
+        }
+    }
+
+    &__sabcard:first-of-type{
+        margin-top: 218px;
+
+        @include f.breakpoint(tablet) {
+            margin-top: 305px;
+
+            @include f.breakpoint(pc) {
+                margin-top: 682px;
+            }
+        }
+    }
+
+    &--first{
+        background-image: url(../../../images/main_card_1.jpg);
+    
+        @include f.breakpoint(tablet) {
+            margin-right: 20.5px;
+    
+            @include f.breakpoint(pc) {
+                margin-right: 2.6%;
+            }
+        }
+    }
+
+    &--second{
+        background-image: url(../../../images/main_card_2.jpg);
+    
+        @include f.breakpoint(tablet) {
+            margin-left: 20.5px;
+    
+            @include f.breakpoint(pc) {
+                margin-left: 2.6%;
+            }
+        }
+    }
+}

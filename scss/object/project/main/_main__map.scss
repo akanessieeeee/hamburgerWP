@@ -1,0 +1,107 @@
+@use "../../../foundation/foundation" as f;
+
+.p-main__map{
+  min-height: 691px;
+  background-image: url(../../../images/main_map.jpg);
+  position: relative;
+
+  @include f.breakpoint(tablet) {
+    min-height: 415px;
+
+    @include f.breakpoint(pc) {
+      min-height: 649px;
+    }
+  }
+
+  &__title{
+    padding-top: 42px;
+    padding-left: 42px;
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+
+    @include f.breakpoint(pc) {
+      padding-top: 86px;
+      padding-left: 119px;
+    }
+  }
+
+  &__separate{
+    height: 2px;
+    width: 75px;
+    margin-top: 6px;
+    margin-left: 42px;
+    position: relative;
+    z-index: 100;
+
+    @include f.breakpoint(tablet) {
+      margin-top: 15px;
+
+      @include f.breakpoint(pc) {
+        margin-top: 50.0px;
+        margin-left: 119.5px;
+      }
+    }
+  }
+
+  &__content{
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: f.$bold;
+    line-height: 28px;
+    position: relative;
+    z-index: 100;
+
+    @include f.breakpoint(tablet) {
+      line-height: 36px;
+      font-weight: f.$Lbold;
+      padding: 14px 29px 40px 42px;
+
+      @include f.breakpoint(pc) {
+        width: 61%;
+        padding-top: 58.5px;
+        padding-left: 119px;
+      }
+    }
+  }
+}
+
+.p-main__map:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 691px;
+  background-color: f.$ClearBlack;
+
+  @include f.breakpoint(tablet) {
+    min-height: 415px;
+
+    @include f.breakpoint(pc) {
+      min-height: 649px;
+    }
+  }
+}
+
+.p-main__map:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 415px;
+  background-color: f.$ClearBlack;
+
+  @include f.breakpoint(tablet) {
+    height: auto;
+
+    @include f.breakpoint(pc) {
+      width: 61%;
+    }
+  }
+}

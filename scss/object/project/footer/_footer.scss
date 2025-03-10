@@ -1,0 +1,10 @@
+@use "../../../foundation/foundation" as f;
+
+.p-footer{
+    height: 150px;
+    background-image: url(../../../images/footer_bg.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;   
+}

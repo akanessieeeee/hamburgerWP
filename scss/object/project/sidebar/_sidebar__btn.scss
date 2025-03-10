@@ -1,0 +1,28 @@
+@use "../../../foundation/foundation" as f;
+
+.p-sidebar__btn{
+  height: 40px;
+  width: 30px;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  cursor: pointer;
+
+  @include f.breakpoint(tablet) {
+    top: 20px;
+    right: 25px;
+
+    @include f.breakpoint(pc) {
+      display: none;
+    }
+  }
+
+  &__bar{
+    &--first{
+      transform: rotate(45deg);
+    }
+    &--second{
+      transform: rotate(-45deg);
+    }
+  } 
+}

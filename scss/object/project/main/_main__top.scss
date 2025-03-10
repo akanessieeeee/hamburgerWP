@@ -1,0 +1,33 @@
+@use "../../../foundation/foundation" as f;
+
+
+.p-main__top{
+    position: relative;
+    width: 100%;
+    height: 285px;
+    background-image: url(../../../images/main_title_bg.jpg);
+
+    @include f.breakpoint(tablet) {
+        background-position: center;
+
+        @include f.breakpoint(pc) {
+            height: 530px;
+        }
+    }
+
+    &__title{
+        position: absolute;
+        top: 122px;
+        left: 25px;
+        font-size: 40px;
+
+        @include f.breakpoint(tablet) {
+            left: 86px;
+
+            @include f.breakpoint(pc) {
+                top: 234px;
+            }
+        }
+    }
+}
+

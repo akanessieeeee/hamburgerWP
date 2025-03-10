@@ -1,0 +1,17 @@
+@use "../../../foundation/foundation" as f;
+
+.p-header__title{
+    padding-top: 35px;
+    font-size: 40px;
+    font-weight: f.$bold;
+    text-align: center;
+
+    @include f.breakpoint(tablet) {
+        padding-top: 40px;
+
+        @include f.breakpoint(pc) {
+            padding: 0 0 0 4%;
+            font-size: 60px;
+        }
+    }
+}

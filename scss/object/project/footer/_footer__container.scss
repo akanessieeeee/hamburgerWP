@@ -1,0 +1,23 @@
+@use "../../../foundation/foundation" as f;
+
+.p-footer__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 20px;
+
+    @include f.breakpoint(tablet) {
+        margin-top: 30px;
+
+        @include f.breakpoint(pc) {
+            margin-top: 41px;
+        }
+    }
+
+    &__separate{
+        margin: 6px 10px 0 10px;
+        height: 20px;
+        width: 1.5px;
+    }
+}
